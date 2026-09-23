@@ -563,11 +563,28 @@
     border-color: var(--teal);
     font-weight:600;
   }
+#introOverlay{
+  position:fixed; inset:0; z-index:9999;
+  background:var(--bg); color:var(--ink);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  padding:24px; text-align:center; overflow-y:auto;
+}
+#introOverlay h1{ font-family:'Fraunces',serif; font-size:28px; margin-bottom:12px; }
+#introOverlay p{ font-size:16px; line-height:1.6; color:var(--ink-dim); margin-bottom:16px; max-width:500px; }
+#introCloseBtn{
+  margin-top:12px; padding:12px 28px; border-radius:24px; border:none;
+  background:var(--teal); color:var(--bg); font-weight:600; font-size:15px; cursor:pointer;
+}
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5863071781336315" crossorigin="anonymous"></script>
 </head>
 <body>
-
+<div id="introOverlay">
+  <h1>Clario — Think It Through</h1>
+  <p>Clario is an AI-powered chatbot built to help you think clearly, solve problems, and get things done...</p>
+  <p>Ask Clario anything: get step-by-step explanations, generate images from your ideas, or create short videos — all from one simple chat interface.</p>
+  <button id="introCloseBtn" onclick="document.getElementById('introOverlay').style.display='none'">Start Chatting</button>
+</div>
 <header>
   <div class="brand">
     <h1>Clario<span>.</span></h1>
